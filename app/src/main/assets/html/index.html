@@ -3,23 +3,11 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="../css/common.css">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	
-<style>
-.ui-block-a, .ui-block-b, .ui-block-c {
-    background-color: lightgray;
-    border: 1px solid black;
-    height: 100px;
-    font-weight: bold;
-    text-align: center;
-    padding: 30px;
-}
-#my_table{border : 1px solid black;}
-#my_table tbody tr{border : 1px solid black;}
-#my_table tbody tr td{border : 1px solid black;}
-#my_table thead tr th{border : 1px solid black;background: gray}
-</style>
+<script src="../js/common.js"></script>
+
 </head>
 <body>
 
@@ -27,6 +15,7 @@
 <div data-role="page" id="three_column">
 
 </div> -->
+<div id='wrapper'>
 <div data-role="page" id="toggle_table">
   <div data-role="header">
     <h1>WEBVIEW SAMPLE</h1>
@@ -99,16 +88,30 @@
 
   <a href="#" class="ui-btn">Gray Button (default)</a>
   <a href="#" class="ui-btn ui-btn-b">Black Button</a>
+  <input type="text" id="sample" value="aaa"/>
   <br>
 
 
-  <a href="#" class="ui-btn ui-btn-inline">Gray Button (default)</a>
-  <a href="#" class="ui-btn ui-btn-inline ui-btn-b">Black Button</a>
+  <a href="#" class="ui-btn ui-btn-inline" onClick="showResult()">SHOW RESULT</a>
+  <a href="#" class="ui-btn ui-btn-inline ui-btn-b" id='test_btn'>SHOW SUCCESS</a>
 
 </div> 
   <div data-role="footer">
     <h1>Footer Text</h1>
   </div>
-</div> 
+</div>
+</div>
+</body>
+<script type="text/javascript">
+$(function(){
+   $('#test_btn').click(function(){
+
+        $('#wrapper').html('<div>NEW PAGE</div>');
+
+   });
+
+});
+
+</script>
 </body>
 </html>
